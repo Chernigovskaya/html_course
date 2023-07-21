@@ -21,11 +21,20 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    align-items: center;
 }
 .header_left {
     display: flex;
     align-items: center;
     gap: 41px;
+}
+.header_right {
+    display: flex;
+    align-items: center;  
+}
+.header_nav.registr {
+    padding-left: 25px;
+    padding-right: 42px;
 }
 .top {
     background-color: #F1E4E6;
@@ -36,7 +45,7 @@ a {
     margin-bottom: 65px;
 }
 .top_img {
-    width: 50%;
+    width: 50vw;
 }
 .top_name {
     display: flex;
@@ -175,6 +184,10 @@ a {
         padding-right: calc(50% - 335px);
         padding: 1%;
     }
+    .header {
+        padding-left: 4.2%;
+        padding-right: 5.3%;
+    }
   
     .top {
         padding-left: calc(50% - 365px);
@@ -212,5 +225,77 @@ a {
     .product_direc {
         padding: 25px 29px 20px 18px;
     }
-
 }   
+@media (max-width: 767px) {
+    .center {
+        padding-left: calc(50% - 188px);
+        padding-right: calc(50% - 188px);
+        padding: 1%;
+    }
+    .header {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+    .header_nav {
+        display: none;
+    }
+    .top {
+        align-items: center;
+        min-height: 363px; 
+        justify-content: center;
+    }
+
+    .top_img {
+        display: none;
+    }
+    .top_name {
+        margin-top: 0px;
+    }
+    .top_title {
+        font-size: 38px;
+    }
+    .top_head {
+        font-size: 20px;
+    }
+    .sale {
+        margin-bottom: 32px;
+    }
+    
+    .sale_items {
+        flex-wrap: wrap;
+        padding-bottom: 0;
+    }
+    .item {
+        width: 100vw;
+        margin-bottom: 32px; 
+        min-height: 248px;
+         
+    }
+    .item.big {
+        width: 98vw;
+        min-height: 111px;
+    }
+    .product_items {
+        margin: 1.5%;
+    }
+
+    .product_text {
+        margin-bottom: 60px;
+    }
+    .product {
+        width: 100vw;
+        margin-bottom: 4%;
+    }
+    .sale_img {
+        width: 100vw;
+    }
+    .sale_img.big {
+        min-height: 111px;
+        width: 98%;
+    }
+    .link_all_product {
+        margin-top: 40px;
+        margin-bottom: 85px;
+    }
+
+}
