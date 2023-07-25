@@ -6,6 +6,7 @@
 .center {
     padding-left: calc(50% - 570px);
     padding-right: calc(50% - 570px);
+    
    
   }
 body {
@@ -36,11 +37,9 @@ a:hover {
 .header_right {
     display: flex;
     align-items: center;  
-   
-}
-/* .header_nav.cart {
     padding-right: 1%;
-} */
+}
+
 .header_nav:hover {
     transform: scale(1.2);
 }
@@ -59,11 +58,10 @@ a:hover {
 .top_info {
     display: flex;
     justify-content: left;
-    gap: 10%;
+    margin-left: 4%;
+    gap: 5%;
 }
-/* .top_img {
-    width: 50vw;
-} */
+
 .top_name {
     display: flex;
     gap: 16px;
@@ -100,7 +98,7 @@ a:hover {
 }
 .item {
     position: relative;
-    width: 31%;
+    width: 32%;
 }
 .item:hover {
     transform: scale(1.1);
@@ -158,9 +156,10 @@ a:hover {
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 48px;
+    padding: 0 1%;
 }
 .product {
-    width: 31%;
+    width: 32%;
     background-color: #F8F8F8;
     margin-bottom: 3%;
     position: relative;
@@ -220,19 +219,23 @@ a:hover {
   }
   
 .link_all_product {
-    width: 212px;
-    height: 48px;
-    border: #FF6A6A 2px solid;
-    padding: 15px 39px 14px;
-    margin-left: auto;
-    margin-right: auto;
+    display: flex;
+    justify-content: center;
     margin-bottom: 95px;
-    white-space: nowrap
+    white-space: nowrap;
+    
 }
 .all_product {
     color: #F26376;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 400; 
+    padding: 15px 39px 14px;
+    border: #FF6A6A 2px solid;
+    background-color: #fff;
+}
+.all_product:hover {
+    background-color: #FF6A6A;
+    color: #fff;
 }
 .footer_box {
     background-color: #222224;
@@ -295,7 +298,7 @@ a:hover {
     margin-bottom: 39px;
 }
 .inpyt_email_text {   
-    padding-left: 20px; 
+    padding: 20px; 
     width: 256px;
     height: 49px;
     background-color: #E1E1E1;
@@ -326,7 +329,8 @@ a:hover {
 .footer_icons_box {
     display: flex;
     justify-content: space-between;  
-    align-items: center;  
+    align-items: center; 
+    padding: 0 2%; 
 }
   
 
@@ -334,11 +338,9 @@ a:hover {
     color: #FBFBFB;
     font-size: 16px;
     font-weight: 400; 
-    padding: 24px 4px; 
+    padding: 24px 2%; 
 }
-.footer_icon_img {
-    padding: 0px 4px;
-}
+
 .footer_icon_img:hover path{
     fill: #F16D7F;
 }
@@ -427,7 +429,7 @@ a:hover {
         justify-content: center;
     }
 
-    .top_img {
+    .img_top_left {
         display: none;
     }
     .top_name {
@@ -449,7 +451,7 @@ a:hover {
     }
     .item {
         width: 100vw;
-        margin-bottom: 32px; 
+        margin-bottom: 8%; 
         min-height: 248px;
          
     }
@@ -457,16 +459,13 @@ a:hover {
         width: 98vw;
         min-height: 111px;
     }
-    .product_items {
-        margin: 1.5%;
-    }
-
+  
     .product_text {
         margin-bottom: 60px;
     }
     .product {
         width: 100vw;
-        margin-bottom: 4%;
+        margin-bottom: 6%;
     }
     .sale_img {
         width: 100vw;
