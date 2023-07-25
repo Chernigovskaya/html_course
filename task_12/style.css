@@ -25,16 +25,22 @@ a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
+   
 }
 .header_left {
     display: flex;
     align-items: center;
     gap: 41px;
+    padding-left: 1%;
 }
 .header_right {
     display: flex;
     align-items: center;  
+   
 }
+/* .header_nav.cart {
+    padding-right: 1%;
+} */
 .header_nav:hover {
     transform: scale(1.2);
 }
@@ -50,9 +56,14 @@ a:hover {
     max-height: 764px;
     margin-bottom: 65px;
 }
-.top_img {
-    width: 50vw;
+.top_info {
+    display: flex;
+    justify-content: left;
+    gap: 10%;
 }
+/* .top_img {
+    width: 50vw;
+} */
 .top_name {
     display: flex;
     gap: 16px;
@@ -60,7 +71,7 @@ a:hover {
     padding-left: 64px;
 }
 .img_top_left {
-    width: 100%;
+    width: 50%;
     height: 100%;
 }
 .img_top_right {
@@ -90,6 +101,9 @@ a:hover {
 .item {
     position: relative;
     width: 31%;
+}
+.item:hover {
+    transform: scale(1.1);
 }
 .sale_img {
     max-width: 100%;
@@ -151,6 +165,9 @@ a:hover {
     margin-bottom: 3%;
     position: relative;
 }
+.product:hover {
+    transform: scale(1.1);
+}
 .product:hover .product_img {
     filter: brightness(0.3);
 }
@@ -192,22 +209,15 @@ a:hover {
     align-items: center;
     justify-content: center;
     color: #FFFFFF;
-    background-color:  rgba(58, 56, 56, 0.86);;
-}
-
-  
-  .button_cart:hover svg path {
-    fill: #F16D7F;
-  }
-  
-.button_cart_text {
-    color: #FFF;
+    background-color:  rgba(58, 56, 56, 0.86);
     font-size: 14px;
     font-weight: 400;
     margin-left: 11px;
-
+    gap: 5%;
 }
-
+  .button_cart:hover svg path {
+    fill: #F16D7F;
+  }
   
 .link_all_product {
     width: 212px;
@@ -248,8 +258,8 @@ a:hover {
     text-align: center;
     font-size: 14px;
     font-weight: 300;
-    width: 360px;
-    padding: 20px 20px;
+    max-width: 360px;
+    padding: 20px;
 }
 .footer_subscription_box {
     background: url(img/subscribe_img.jpg) no-repeat;
