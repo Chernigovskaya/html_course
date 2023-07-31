@@ -1,0 +1,12 @@
+$widthSite: 1140px;
+$colorSite: #F16D7F;
+$backgroundColorSite: #222;
+$backgroundColorProducts: #FFF;
+$colorTextFooter: #FBFBFB;
+
+@mixin location () {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}

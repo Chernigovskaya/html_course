@@ -1,0 +1,121 @@
+@import 'vars';
+
+.catalog_head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F8F3F4;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.catalog_head_headung {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: $colorSite;
+}
+.bread_crunbs {
+    display: flex;
+    gap: 10px;
+    &_link {
+    color: #636363;
+    font-size: 14px;
+    font-weight: 300;
+    }
+    &_link.site {
+        color: $colorSite;
+        font-weight: 700;
+        }
+    &_link:hover {
+        transform: scale(1.2);
+    }
+}
+.catalog_top {
+    background-color: #F7F7F7;
+    padding: 0 2%;
+  
+    &_img {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &_arrow {
+            padding: 8px;
+            background-color: rgba(42, 42, 42, 0.15);;
+        }
+    }
+}
+.catalog_top_info {
+    text-align: center;
+    margin-bottom: 130px;
+
+    &_heading {
+        border: 1px solid #EAEAEA;   
+        padding-top: 64px;
+        padding-bottom: 64px;
+        background-color: $backgroundColorProducts;   
+    }
+    &_head {
+        color: $colorSite;
+        font-size: 14px;
+        font-weight: 300;       
+    }
+    &_img {
+        margin: 12px;
+    }
+    &_name {
+        color: #4D4D4D;
+        font-size: 18px;
+        font-weight: 300;
+        margin-bottom: 48px;
+    }
+    &_text {
+        color: #5E5E5E;
+        font-size: 14px;
+        font-weight: 300;
+        max-width: 555px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 32px;
+    }
+    &_price {
+        color: $colorSite;
+        font-size: 24px;
+        font-weight: 300;
+        padding-bottom: 32px;
+
+    }
+    &_button_cart {
+        padding: 16px 57px 9px 24px;
+        border: $colorSite solid 1px;
+        display: flex;
+        gap: 24px;
+        align-items: center;
+        margin-top: 64px;
+        background-color: #fff;
+        margin-left: auto;
+        margin-right: auto;
+
+        &_add {
+            color: $colorSite;
+        }
+    }
+    &_button_cart:hover {
+        background-color: $colorSite;
+       
+    } 
+    &_button_cart_add:hover {
+            color: $backgroundColorProducts;
+        }
+
+    &_button_cart:hover svg path {
+        fill: $backgroundColorProducts;
+        }
+   
+ 
+
+}
+    .footer.product {
+        margin-top: 128px;
+    }
