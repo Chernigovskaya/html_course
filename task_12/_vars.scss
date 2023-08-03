@@ -1,8 +1,10 @@
 $widthSite: 1140px;
 $colorSite: #F16D7F;
 $backgroundColorSite: #222;
+$colorDarkSite: #000;
 $backgroundColorProducts: #FFF;
 $colorTextFooter: #FBFBFB;
+$widthBurgerMenu: 232px;
 
 @mixin location () {
     display: flex;

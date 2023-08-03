@@ -2,38 +2,79 @@
 <html lang="en">
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Roboto&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="box_content">
     <header class="header center">
         <nav class="header_left">
             <a class="header_nav" href="index.html"><img src="img/logo.svg" alt="logo"></a>
             <a class="header_nav" href="#"><img src="img/search.svg" alt="search"></a>
         </nav>    
         <nav class="header_right">
-            <a class="header_check" href="#"><img src="img/menu.svg" alt="menu"></a>
+            <div class="burger_menu">
+                <label for="burger"><img src="img/menu.svg" alt="menu"></label>
+                <input id="burger" type="checkbox" checked="checked">
+                <nav class="nav">
+                    <a class="nav_heading" href="#">MENU</a>
+                   
+                    <div class="nav_items">
+                        <a class="nav_head" href="#">MAN</a>
+                        
+                        <div class="nav_link_box">
+                            <a href="#" class="nav_link">Accessories</a>
+                            <a href="#" class="nav_link">Bags</a>
+                            <a href="#" class="nav_link">Denim</a>
+                            <a href="#" class="nav_link">T-Shirts</a> 
+                    </div>
+                    <div class="nav_items">
+                        <a class="nav_head" href="#">WOMAN</a>
+                        
+                        <div class="nav_link_box">
+                            <a href="#" class="nav_link">Accessories</a>
+                            <a href="#" class="nav_link">Jackets & Coats</a>
+                            <a href="#" class="nav_link">Polos</a>
+                            <a href="#" class="nav_link">T-Shirts</a> 
+                            <a href="#" class="nav_link">Shirts</a> 
+                    </div>
+                    <div class="nav_items">
+                        <a class="nav_head" href="#">KIDS</a>
+                   
+                        <div class="nav_link_box">
+                            <a href="#" class="nav_link">Accessories</a>
+                            <a href="#" class="nav_link">Jackets & Coats</a>
+                            <a href="#" class="nav_link">Polos</a>
+                            <a href="#" class="nav_link">T-Shirts</a> 
+                            <a href="#" class="nav_link">Shirts</a> 
+                            <a href="#" class="nav_link">Shirts</a> 
+                    </div>
+                </nav>
+            </div>
+        
            <a class="header_nav registr" href="#"><img src="img/registr.svg" alt="registrathion"></a>
            <a class="header_nav cart" href="#"><img src="img/cart.svg" alt="cart"></a>
         </nav>
     </header>
+ 
+ 
     <section class="top center">
         <div class="top_info">
             <img class="top_img_left" src="img/top_img.svg" alt="top_img">
-            <div class="top_content">
+            <div class="top_img_rigth">
+                <div class="top_content">
                 <h1 class="top_title">THE BRAND</h1>
                 <h2 class="top_head">OF LUXERIOUS FASHION</h2>
             </div>
-       
-              
-        </article>
-        </div>
-        
+            </div>
+            
+        </div>  
     </section>
+
     <section class="sale center">
         <div class="sale_items">
             <article class="sale_item">
@@ -58,6 +99,7 @@
             <a class="sale_title big" href="">ACCESORIES</a>
         </article>
     </section>
+
     <section class="products_box center">
         <header class="products">
             <h2 class="products_title">Fetured Items</h2>
@@ -163,12 +205,14 @@
             </article>
         </div>
     </section>
+
     <div class="center">
         <div class="all_product">
             <button class="all_product_link">Browse All Product</button>
             <a  href="#"></a>
         </div>
     </div>
+
     <footer class="footer">
         <div class="footer_box center">
             <section class="footer_header">
@@ -255,6 +299,7 @@
         </div>
         </div>
     </footer>
+    </div>
    
 </body>
 </html>
