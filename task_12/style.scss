@@ -1,6 +1,7 @@
 @import 'vars';
 @import 'product';
 @import 'catalog';
+@import 'cart';
 
 
 * {
@@ -22,7 +23,6 @@ summary::-webkit-details-marker {
   }
 body {
     font-family: 'Lato', sans-serif;
-    font-family: 'Roboto', sans-serif;
   }
 .box_content {
     overflow: hidden;
@@ -78,20 +78,16 @@ a:hover {
     transition: right .3s;
     &_items {
         padding-top: 20px;
-        
     }
-
     &_heading {
         color: $colorDarkSite;
         font-size: 14px;
         font-weight: 700;
-       
     }
     &_head {
         color: $colorSite;
         font-size: 14px;
         font-weight: 400;
-
     }
     &_link_box {
         display: flex;
@@ -105,24 +101,21 @@ a:hover {
         font-size: 14px;
         font-weight: 400;
     }
-
-
 }
 
 
 .top {
-    
     display: block;
     justify-content: left;
     padding-left: calc(50% - 800px);
     padding-right: calc(50% - 800px);
     max-height: 764px;
     margin-bottom: 65px;
+    background-color: #F1E4E6;
 
     &_info {
         display: flex;
         align-items: center;
-        background-color: #F1E4E6;
     }
 
     &_img_left {
@@ -140,8 +133,7 @@ a:hover {
     &_content {
         border-left: 10px solid $colorSite;
         max-height: 92px;
-        padding-left: 16px;
-        
+        padding-left: 16px; 
     }
     &_title {
         color: backgroundColorSite;
@@ -159,20 +151,21 @@ a:hover {
     box-sizing: border-box;
     margin: 1%;
     margin-bottom: 96px;
-   
-    
+
+
     &_items {
         padding-bottom: 30px;
         @include location;
+    }
+    &_link {
+        display: block;
     }
     &_item {
         position: relative;
         width: 32%; 
         z-index: -1;
     }
-    &_item:hover {
-        transform: scale(1.1);
-    }
+
     &_img {
         max-width: 100%;
     }
@@ -204,7 +197,17 @@ a:hover {
     &_title.big {
         top: 65%;
     }
+    &_items:hover {
+        transform: scale(1.05);
+    }
+    &_item:hover {
+        transform: scale(1.05);
+    }
 }
+.sale:hover {
+    transform: scale(1.05);
+}
+
 
 .products {
     text-align: center;
@@ -225,14 +228,16 @@ a:hover {
 .items {
     @include location();
     margin-bottom: 48px;
-    
+    &_link {
+        display: block;
+    }
     
     &_product {
         width: 32%;
         background-color: #F8F8F8;
         margin-bottom: 3%;
         position: relative;
-        z-index: -1;
+       
         &_img {
             width: 100%;
         }
@@ -250,12 +255,16 @@ a:hover {
             }
         }
     }
-
     &_product:hover {
-        transform: scale(1.1);
+        box-shadow: 0 5px 8px rgba(0,0,0,0.16);
+        transform: scale(1.07);
     }
-    &_product:hover .product_img {
-        filter: brightness(0.3);
+    &_product:hover .add_box {
+        display: flex;
+    }
+
+    &_product:hover .items_product_img {
+        filter: brightness(30%);
     }
     &_product:hover .button_cart {
     display: flex;
@@ -267,31 +276,31 @@ a:hover {
     margin-bottom: 0;
 }
 
-.button_cart {
-    position: absolute;
-    top: 33%;
-    left: 33%;
+
+.add {
+    display: flex;
+    padding: 12px 16px 9px 14px; 
     border: 1px solid $backgroundColorProducts;
-    width: 139px;
-    height: 44px;
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
-    display: none;
     align-items: center;
-    justify-content: center;
+    pointer-events: all;
     color: $backgroundColorProducts;
-    background-color:  rgba(58, 56, 56, 0.86);
-    font-size: 14px;
-    font-weight: 400;
-    margin-left: 11px;
-    gap: 5%;
-    &_add {
-        color: $backgroundColorProducts;
+    gap: 11px;
+    &_box {
+        display: none;
+        position: absolute;
+        top: 33%;
+        justify-content: center;
+        width: 100%;
+        pointer-events: none;
+    }
 }
-
+.add:hover {
+    box-shadow: 0 0 10px $backgroundColorProducts;
 }
-  .button_cart:hover svg path {
+.add:hover svg path {
     fill: $colorSite;
   }
   
@@ -364,6 +373,7 @@ a:hover {
     &_subscription_box {
         background: url(img/subscribe_img.jpg) no-repeat;
         background-size: cover;
+        background-position: bottom;
         background-repeat: no-repeat;
     }
     &_subscription {

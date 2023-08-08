@@ -1,0 +1,47 @@
+.card {
+    margin-top: 96px;
+    &_item {
+        display: flex;
+        gap: 31px;
+        
+    }
+   &_info_item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    list-style-type: none;
+    color: #575757;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    
+   }
+   &_name {
+    color: #222;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 22px 97px 42px 0px;
+   }
+   &_quantity {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+   }
+ 
+   &_quantity_num {
+    max-width: 44px;
+    padding: 2px;
+    text-align: center;
+    border: 1px solid #eaeaea;
+    font-size: 18px;
+   }
+}
+.num {
+    color: #6F6E6E;
+    &_price {
+        color: $colorSite;
+    }
+}

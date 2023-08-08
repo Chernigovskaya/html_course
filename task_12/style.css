@@ -85,7 +85,11 @@
   font-weight: 300;
   padding-bottom: 32px;
 }
-.catalog_top_info_button_cart {
+
+.button_box {
+  display: flex;
+}
+.button_cart {
   padding: 16px 57px 9px 24px;
   border: #F16D7F solid 1px;
   display: flex;
@@ -95,17 +99,13 @@
   background-color: #fff;
   margin-left: auto;
   margin-right: auto;
-}
-.catalog_top_info_button_cart_add {
   color: #F16D7F;
 }
-.catalog_top_info_button_cart:hover {
+.button_cart:hover {
   background-color: #F16D7F;
-}
-.catalog_top_info_button_cart_add:hover {
   color: #FFF;
 }
-.catalog_top_info_button_cart:hover svg path {
+.button_cart:hover svg path {
   fill: #FFF;
 }
 
@@ -113,6 +113,7 @@
   display: flex;
   margin-top: 65px;
   gap: 42px;
+  z-index: 1;
 }
 .sort_box {
   display: flex;
@@ -170,6 +171,7 @@
   width: 366px;
   top: 39px;
   position: absolute;
+  z-index: 1;
 }
 .filter[open] {
   background: #FFF;
@@ -226,6 +228,52 @@
   gap: 28px;
 }
 
+.card {
+  margin-top: 96px;
+}
+.card_item {
+  display: flex;
+  gap: 31px;
+}
+.card_info_item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  list-style-type: none;
+  color: #575757;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.card_name {
+  color: #222;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 22px 97px 42px 0px;
+}
+.card_quantity {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.card_quantity_num {
+  max-width: 44px;
+  padding: 2px;
+  text-align: center;
+  border: 1px solid #eaeaea;
+  font-size: 18px;
+}
+
+.num {
+  color: #6F6E6E;
+}
+.num_price {
+  color: #F16D7F;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -247,7 +295,6 @@ summary::-webkit-details-marker {
 
 body {
   font-family: "Lato", sans-serif;
-  font-family: "Roboto", sans-serif;
 }
 
 .box_content {
@@ -342,11 +389,11 @@ a:hover {
   padding-right: calc(50% - 800px);
   max-height: 764px;
   margin-bottom: 65px;
+  background-color: #F1E4E6;
 }
 .top_info {
   display: flex;
   align-items: center;
-  background-color: #F1E4E6;
 }
 .top_img_left {
   width: 50%;
@@ -386,13 +433,13 @@ a:hover {
   justify-content: space-between;
   align-items: center;
 }
+.sale_link {
+  display: block;
+}
 .sale_item {
   position: relative;
   width: 32%;
   z-index: -1;
-}
-.sale_item:hover {
-  transform: scale(1.1);
 }
 .sale_img {
   max-width: 100%;
@@ -425,6 +472,16 @@ a:hover {
 .sale_title.big {
   top: 65%;
 }
+.sale_items:hover {
+  transform: scale(1.05);
+}
+.sale_item:hover {
+  transform: scale(1.05);
+}
+
+.sale:hover {
+  transform: scale(1.05);
+}
 
 .products {
   text-align: center;
@@ -449,12 +506,14 @@ a:hover {
   align-items: center;
   margin-bottom: 48px;
 }
+.items_link {
+  display: block;
+}
 .items_product {
   width: 32%;
   background-color: #F8F8F8;
   margin-bottom: 3%;
   position: relative;
-  z-index: -1;
 }
 .items_product_img {
   width: 100%;
@@ -473,10 +532,14 @@ a:hover {
   font-weight: 400;
 }
 .items_product:hover {
-  transform: scale(1.1);
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
+  transform: scale(1.07);
 }
-.items_product:hover .product_img {
-  filter: brightness(0.3);
+.items_product:hover .add_box {
+  display: flex;
+}
+.items_product:hover .items_product_img {
+  filter: brightness(30%);
 }
 .items_product:hover .button_cart {
   display: flex;
@@ -487,31 +550,32 @@ a:hover {
   margin-bottom: 0;
 }
 
-.button_cart {
-  position: absolute;
-  top: 33%;
-  left: 33%;
+.add {
+  display: flex;
+  padding: 12px 16px 9px 14px;
   border: 1px solid #FFF;
-  width: 139px;
-  height: 44px;
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
-  display: none;
   align-items: center;
-  justify-content: center;
+  pointer-events: all;
   color: #FFF;
-  background-color: rgba(58, 56, 56, 0.86);
-  font-size: 14px;
-  font-weight: 400;
-  margin-left: 11px;
-  gap: 5%;
+  gap: 11px;
 }
-.button_cart_add {
-  color: #FFF;
+.add_box {
+  display: none;
+  position: absolute;
+  top: 33%;
+  justify-content: center;
+  width: 100%;
+  pointer-events: none;
 }
 
-.button_cart:hover svg path {
+.add:hover {
+  box-shadow: 0 0 10px #FFF;
+}
+
+.add:hover svg path {
   fill: #F16D7F;
 }
 
@@ -586,6 +650,7 @@ a:hover {
 .footer_subscription_box {
   background: url(img/subscribe_img.jpg) no-repeat;
   background-size: cover;
+  background-position: bottom;
   background-repeat: no-repeat;
 }
 .footer_subscription {

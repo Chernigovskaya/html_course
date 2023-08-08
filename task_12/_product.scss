@@ -87,7 +87,12 @@
         padding-bottom: 32px;
 
     }
-    &_button_cart {
+}
+.button {
+    &_box {
+        display: flex;
+    }
+    &_cart {
         padding: 16px 57px 9px 24px;
         border: $colorSite solid 1px;
         display: flex;
@@ -97,31 +102,27 @@
         background-color: #fff;
         margin-left: auto;
         margin-right: auto;
-
-        &_add {
-            color: $colorSite;
-        }
+        color: $colorSite;
     }
-    &_button_cart:hover {
+    
+    &_cart:hover {
         background-color: $colorSite;
-       
+        color: $backgroundColorProducts;
     } 
-    &_button_cart_add:hover {
-            color: $backgroundColorProducts;
-        }
-
-    &_button_cart:hover svg path {
+    
+    
+    &_cart:hover svg path {
         fill: $backgroundColorProducts;
         }
-   
- 
 
 }
+
 
 .sort {
     display: flex;
     margin-top: 65px;
     gap: 42px;
+    z-index: 1;
 
     &_box {
         display: flex; 
