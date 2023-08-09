@@ -228,12 +228,27 @@
   gap: 28px;
 }
 
-.card {
+.cart__content {
+  display: flex;
   margin-top: 96px;
+}
+
+.card {
+  margin-right: 128px;
+}
+.card-box {
+  width: 652px;
 }
 .card_item {
   display: flex;
-  gap: 31px;
+  margin-bottom: 40px;
+  height: 306px;
+  position: relative;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
+}
+.card_img {
+  width: 262px;
+  margin-right: 31px;
 }
 .card_info_item {
   display: flex;
@@ -266,12 +281,101 @@
   border: 1px solid #eaeaea;
   font-size: 18px;
 }
+.card_vector {
+  margin: 28px 22px;
+}
+.card__button-box {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 72px;
+}
+.card__button {
+  color: #000;
+  font-size: 14px;
+  font-weight: 300;
+  padding: 16px 40px;
+  border: 1px solid #A4A4A4;
+}
 
 .num {
   color: #6F6E6E;
 }
 .num_price {
   color: #F16D7F;
+}
+
+.form {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.form__name {
+  color: #222;
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 22px;
+}
+.form__item {
+  margin-bottom: 20px;
+  min-width: 360px;
+  padding: 13px 17px 15px;
+  border: 1px solid #a4a4a4;
+  color: #B1B1B1;
+  font-size: 13px;
+  font-weight: 300;
+}
+.form__button {
+  color: #4A4A4A;
+  font-size: 11px;
+  font-weight: 300;
+  padding: 10px 15px 12px;
+  border: 1px solid #A4A4A4;
+}
+.form__button:hover {
+  color: #FFF;
+  background-color: #F16D7F;
+}
+
+.buy {
+  margin-top: 57px;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  padding: 42px 42px;
+  background-color: #f5f3f3;
+  gap: 12px;
+}
+.buy__sub-total {
+  color: #4A4A4A;
+  font-size: 11px;
+  font-weight: 400;
+}
+.buy__sub-total_span {
+  margin-left: 24px;
+}
+.buy__grand-total {
+  text-align: right;
+  color: #222;
+  font-size: 16px;
+  font-weight: 300;
+  padding-bottom: 21px;
+  width: 275px;
+  border-bottom: 1px solid #E2E2E2;
+}
+.buy__grand-total_span {
+  color: #F16D7F;
+  margin-left: 24px;
+}
+.buy__button {
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 300;
+  padding: 16px 42px;
+  background-color: #F16D7F;
+  margin-top: 17px;
+}
+.buy__button:hover {
+  color: #FFF;
 }
 
 * {
