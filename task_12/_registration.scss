@@ -1,0 +1,82 @@
+.registration { 
+    display: flex;
+    gap: 128px;
+    margin-top: 64px;
+    &__left {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        min-width: 360px;
+        }
+    &__txt {
+        color: #222;
+        font-size: 16px;
+        font-weight: 300;
+        margin-bottom: 20px;
+    }
+    &__form {
+        width: 360px;
+        color: #B1B1B1;
+        font-size: 13px;
+        font-weight: 300;
+    }
+    &__el {
+        display: flex;
+        flex-direction: column;
+        min-width: 360px;
+    }
+    &__button {
+        padding: 16px 20px 16px 29px;
+        color: $backgroundColorProducts;
+        font-size: 14px;
+        font-weight: 400;
+        background-color: $colorSite;
+        margin-top: 39px;
+        &_vector {
+            margin-left: 20px;
+        }
+    }
+    &__button:hover {
+        color: $backgroundColorProducts;
+    }
+
+    &__right {
+        &__txt {
+            color: #000;
+            font-size: 24px;
+            font-weight: 300;
+            margin-bottom: 22px;
+        }
+        &__ul {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;  
+        }
+        &__li {
+            
+            color: #000;
+            font-size: 24px;
+            font-weight: 300;
+            list-style-type: none;
+        }
+        &__li:before{
+            content: '✔';
+            margin-right: 24px;
+        }
+    }
+}
+
+.checkbox-box {
+        display: flex;
+        gap: 10px;
+        margin: 13px 0 33px;
+}
+.checkbox {
+    &__txt {
+        color: #000;
+        font-size: 11px;
+        font-weight: 300;
+    }
+}
+
+
