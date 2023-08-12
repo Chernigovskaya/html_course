@@ -1,12 +1,13 @@
 .registration { 
     display: flex;
-    gap: 128px;
-    margin-top: 64px;
+    gap: 10%;
+    margin: 5% 1.5%;
+    
     &__left {
         display: flex;
         align-items: flex-start;
         flex-direction: column;
-        min-width: 360px;
+       
         }
     &__txt {
         color: #222;
@@ -23,7 +24,7 @@
     &__el {
         display: flex;
         flex-direction: column;
-        min-width: 360px;
+        
     }
     &__button {
         padding: 16px 20px 16px 29px;
@@ -79,4 +80,32 @@
     }
 }
 
-
+@media screen and (max-width: 1023px) {
+    .registration {
+        gap: 3%;
+        &__left {
+            width: 50%;
+        }
+        &__button {
+            margin-bottom: 10%;
+        }
+    }
+    .registration__right__txt {
+        font-size: 16px;
+    }
+    .registration__right__li {
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .registration {
+        gap: 2%;
+        flex-wrap: wrap;
+        &__left {
+            width: 100%;
+        }
+        &__form {
+            width: 100%;
+        }
+    }
+}

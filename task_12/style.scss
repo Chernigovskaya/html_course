@@ -34,27 +34,26 @@ a:hover {
     color: $colorSite; 
 }
 .header {
-    width: 100vw;
     background-color: $backgroundColorSite;
     position: relative;
    @include location;
    &_left {
+        width: 50%;
         display: flex;
         align-items: center;
-        gap: 41px;
-        padding:20px 1%;
+        gap: 5%;
+        padding:2% 1%;
     }
     &_right {
+        width: 50%;
         display: flex;
+        justify-content: end;
         align-items: center;  
-        padding-right: 1%;
+        gap: 5%;
+        padding:2% 1%;
     }
     &_nav:hover {
         transform: scale(1.2);
-    }
-    &_nav.registr {
-        padding-left: 25px;
-        padding-right: 42px;
     }
 }
 
@@ -151,8 +150,6 @@ a:hover {
     box-sizing: border-box;
     margin: 1%;
     margin-bottom: 96px;
-
-
     &_items {
         padding-bottom: 30px;
         @include location;
@@ -162,10 +159,8 @@ a:hover {
     }
     &_item {
         position: relative;
-        width: 32%; 
-        z-index: -1;
+        width: 31%; 
     }
-
     &_img {
         max-width: 100%;
     }
@@ -197,20 +192,16 @@ a:hover {
     &_title.big {
         top: 65%;
     }
-    &_items:hover {
-        transform: scale(1.05);
-    }
     &_item:hover {
         transform: scale(1.05);
     }
 }
-.sale:hover {
-    transform: scale(1.05);
-}
-
 
 .products {
     text-align: center;
+    &_box {
+        margin: 1%;
+    }
     &_title {
         color: backgroundColorSite;
         font-size: 30px;
@@ -223,6 +214,11 @@ a:hover {
         font-weight: 400;
         margin-bottom: 48px;
     }
+    &_text.el {
+        padding: 16px 0px;
+        margin-bottom: 0;
+    }
+
 }
 
 .items {
@@ -237,7 +233,6 @@ a:hover {
         background-color: #F8F8F8;
         margin-bottom: 3%;
         position: relative;
-       
         &_img {
             width: 100%;
         }
@@ -270,12 +265,6 @@ a:hover {
     display: flex;
   }
 }
-
-.products_text.el {
-    padding: 16px 0px;
-    margin-bottom: 0;
-}
-
 
 .add {
     display: flex;
@@ -439,14 +428,7 @@ a:hover {
 
 
 
-
-
-
-
-
-
-
-@media (max-width: 1023px) {
+@media screen and (max-width: 1023px) {
     .center {
         padding-left: calc(50% - $widthSite / 4);
         padding-right: calc(50% - $widthSite / 4);
@@ -506,7 +488,7 @@ a:hover {
         padding-right: 32px;
     }
 }   
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
     .center {
         padding-left: calc(50% - $widthSite / 8);
         padding-right: calc(50% - $widthSite / 8);
@@ -545,7 +527,7 @@ a:hover {
             
         }
         &_item.big {
-            width: 98vw;
+            width: 100vw;
             min-height: 111px;
         }
         &_img {

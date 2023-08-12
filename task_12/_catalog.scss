@@ -14,7 +14,6 @@
 
 .filter {
     padding: 13px 16px 16px;
-
     width: 366px;
     top: 39px;
     position: absolute;
@@ -78,3 +77,35 @@
     gap: 28px;
 }
 
+
+@media screen and (max-width: 1023px) {
+    .sort_box {
+        justify-content: right;
+        margin: 1%;
+    }
+    .items_product {
+        width: 48%;
+    }
+}
+@media screen and (max-width: 767px) {
+    .header_nav_cart {
+        display: flex;
+        
+    }
+    .catalog_head {
+        display: block;
+        text-align: center;
+        // &_headung {
+        //     padding: 3% 1%;
+        // }
+    }
+    .breadcrunbs {
+       &__ul {
+        justify-content: center;
+        padding-bottom: 8%;
+       }
+    }
+    .filter_heading {
+        display: none;
+    }
+}
