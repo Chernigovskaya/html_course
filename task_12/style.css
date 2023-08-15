@@ -299,7 +299,7 @@
   box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
 }
 .card_img {
-  max-width: 40%;
+  max-width: 100%;
 }
 .card_info_item {
   display: flex;
@@ -343,6 +343,9 @@
   font-weight: 300;
   padding: 16px 40px;
   border: 1px solid #A4A4A4;
+}
+.card .card__button:hover {
+  background-color: #F16D7F;
 }
 
 .num {
@@ -453,9 +456,6 @@
 @media screen and (max-width: 767px) {
   .header_nav_cart {
     display: flex;
-  }
-  .card_img {
-    max-width: 35%;
   }
   .card_name {
     font-size: 16px;
@@ -711,7 +711,6 @@ a:hover {
 .top_img_left {
   width: 50%;
   height: 100%;
-  background-color: rgba(113, 103, 105, 0.08);
 }
 .top_img_rigth {
   display: flex;
@@ -785,7 +784,7 @@ a:hover {
   top: 65%;
 }
 .sale_item:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 .products {
@@ -903,11 +902,37 @@ a:hover {
 .all_product_link:hover {
   background-color: #F16D7F;
   color: #FFF;
+  transition: background-color 1s, transform 1s;
 }
 
-.footer_box {
+.discounts {
   background-color: #222;
 }
+.discounts_header {
+  min-height: 341px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: 30px;
+}
+.discounts_header_img {
+  margin-bottom: 26px;
+}
+.discounts_header_title {
+  color: #FBFBFB;
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+.discounts_header_text {
+  color: #FBFBFB;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 300;
+  max-width: 360px;
+  padding: 20px;
+}
+
 .footer_icons {
   background-color: #222;
   min-height: 79px;
@@ -927,38 +952,22 @@ a:hover {
   font-weight: 400;
   padding: 24px 2%;
 }
-.footer_icons_img:hover path {
-  fill: #F16D7F;
+.footer_icons_img {
+  padding: 8px;
+  background-color: #fff;
+  margin-right: 8px;
 }
-.footer_header {
-  min-height: 341px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  gap: 30px;
+.footer_icons_img:hover {
+  background-color: #F16D7F;
+  transition: all 0.5s;
 }
-.footer_header_img {
-  margin-bottom: 26px;
-}
-.footer_header_title {
-  color: #FBFBFB;
-  font-size: 20px;
-  font-weight: 400;
-  margin-bottom: 16px;
-}
-.footer_header_text {
-  color: #FBFBFB;
-  text-align: center;
-  font-size: 14px;
-  font-weight: 300;
-  max-width: 360px;
-  padding: 20px;
+.footer_icons_img:hover svg path {
+  fill: #FFF;
 }
 .footer_subscription_box {
   background: url(img/subscribe_img.jpg) no-repeat;
   background-size: cover;
   background-position: bottom;
-  background-repeat: no-repeat;
 }
 .footer_subscription {
   min-height: 448px;
@@ -1004,6 +1013,7 @@ a:hover {
   font-weight: 400;
   border-radius: 50px 0 0 50px;
   border: none;
+  outline: none;
 }
 .inpyt_email_btn {
   width: 100px;

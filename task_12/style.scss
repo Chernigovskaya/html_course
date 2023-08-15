@@ -74,7 +74,7 @@ a:hover {
     position: absolute; 
     top: 82px;
     right: 0;
-    transition: right .3s;
+    transition: right 0.3s;
     &_items {
         padding-top: 20px;
     }
@@ -120,7 +120,6 @@ a:hover {
     &_img_left {
         width: 50%;
         height: 100%;
-        background-color: rgba(113, 103, 105, 0.08);
     }
 
     &_img_rigth {
@@ -193,7 +192,7 @@ a:hover {
         top: 65%;
     }
     &_item:hover {
-        transform: scale(1.05);
+        transform: scale(1.1);
     }
 }
 
@@ -309,32 +308,13 @@ a:hover {
     &_link:hover {
         background-color: $colorSite;
         color: $backgroundColorProducts;
+        transition: 
+        background-color 1s,
+        transform 1s;
     }  
 }
-
-.footer {
-    &_box {
-        background-color: $backgroundColorSite;
-    }
-    &_icons {
-        background-color: $backgroundColorSite;
-        min-height: 79px;
-        align-items: center;
-        text-align: center;
-        &_box {
-            @include location();
-            padding: 0 2%; 
-        }
-        &_text {
-            color: $colorTextFooter;
-            font-size: 16px;
-            font-weight: 400; 
-            padding: 24px 2%; 
-        }
-        &_img:hover path{
-            fill: $colorSite;
-        }
-    }
+.discounts {
+    background-color: $backgroundColorSite;    
     &_header {
         min-height: 341px;
         display: flex;
@@ -359,11 +339,44 @@ a:hover {
             padding: 20px;
         }
     }
+}
+.footer {
+
+    &_icons {
+        background-color: $backgroundColorSite;
+        min-height: 79px;
+        align-items: center;
+        text-align: center;
+        &_box {
+            @include location();
+            padding: 0 2%; 
+        }
+        &_text {
+            color: $colorTextFooter;
+            font-size: 16px;
+            font-weight: 400; 
+            padding: 24px 2%; 
+        }
+        &_img {
+            padding: 8px;
+            background-color: #fff;
+            margin-right: 8px;
+     
+        }
+        &_img:hover {
+            background-color: $colorSite;
+            transition: all 0.5s;
+        }
+        &_img:hover svg path {
+            fill: $backgroundColorProducts;
+            
+        }
+    }
+
     &_subscription_box {
         background: url(img/subscribe_img.jpg) no-repeat;
         background-size: cover;
         background-position: bottom;
-        background-repeat: no-repeat;
     }
     &_subscription {
         min-height: 448px;
@@ -409,6 +422,7 @@ a:hover {
     font-weight: 400;
     border-radius: 50px 0 0 50px;
     border: none;
+    outline: none;
     }
     &_btn {
         width: 100px;

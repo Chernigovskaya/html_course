@@ -22,7 +22,7 @@
         box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
     }
     &_img {
-        max-width: 40%;
+        max-width: 100%;
     }
    &_info_item {
         display: flex;
@@ -68,6 +68,9 @@
         font-weight: 300;
         padding: 16px 40px;
         border: 1px solid #A4A4A4;     
+}
+.card__button:hover {
+    background-color: $colorSite;
 }
 }
 .num {
@@ -191,9 +194,6 @@
             display: flex;
         }
         .card {
-            &_img {
-                max-width: 35%;
-            }
             &_name {
                 font-size: 16px;
             }
