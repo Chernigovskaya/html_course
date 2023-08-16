@@ -518,6 +518,7 @@
   font-weight: 400;
   background-color: #F16D7F;
   margin-top: 39px;
+  border: none;
 }
 .registration__button_vector {
   margin-left: 20px;
@@ -668,6 +669,7 @@ a:hover {
   top: 82px;
   right: 0;
   transition: right 0.3s;
+  z-index: 2;
 }
 .nav_items {
   padding-top: 20px;
@@ -746,11 +748,10 @@ a:hover {
   align-items: center;
 }
 .sale_link {
-  display: block;
+  width: 32%;
 }
 .sale_item {
   position: relative;
-  width: 31%;
 }
 .sale_img {
   max-width: 100%;
@@ -1051,10 +1052,7 @@ a:hover {
     margin-bottom: 100px;
   }
   .sale_items {
-    padding-bottom: 20px;
-  }
-  .sale_item {
-    width: 32%;
+    padding-bottom: 2%;
   }
   .sale_head {
     top: 45%;
@@ -1066,7 +1064,7 @@ a:hover {
   .items_product_direc {
     padding: 25px 29px 20px 18px;
   }
-  .footer_header {
+  .discounts_header {
     flex-direction: column;
     gap: 48px;
     padding-top: 48px;
@@ -1109,23 +1107,29 @@ a:hover {
     font-size: 20px;
   }
   .sale {
-    margin-bottom: 32px;
+    margin-bottom: 16%;
+  }
+  .sale_items {
+    padding-bottom: 0;
   }
   .sale_item {
     width: 100vw;
-    margin-bottom: 8%;
+    margin-bottom: 4%;
     min-height: 248px;
   }
+  .sale_link {
+    width: 100%;
+  }
   .sale_item.big {
-    width: 100vw;
+    width: 100%;
     min-height: 111px;
   }
   .sale_img {
-    width: 100vw;
+    width: 98vw;
   }
   .sale_img.big {
     min-height: 111px;
-    width: 98%;
+    width: 100%;
   }
   .products_text {
     margin-bottom: 60px;
@@ -1150,11 +1154,10 @@ a:hover {
     min-height: 143px;
   }
   .footer_icons_box {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
   .footer_icons_text {
     order: 2;
-    padding: 0 0 9px;
   }
   .icons_nav {
     padding: 43px 8px 40px;

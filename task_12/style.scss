@@ -75,6 +75,7 @@ a:hover {
     top: 82px;
     right: 0;
     transition: right 0.3s;
+    z-index: 2;
     &_items {
         padding-top: 20px;
     }
@@ -154,11 +155,11 @@ a:hover {
         @include location;
     }
     &_link {
-        display: block;
+        width: 32%;
     }
     &_item {
         position: relative;
-        width: 31%; 
+        
     }
     &_img {
         max-width: 100%;
@@ -466,11 +467,8 @@ a:hover {
     .sale {
         margin-bottom: 100px;    
         &_items {
-            padding-bottom: 20px;
+            padding-bottom: 2%;
         }    
-        &_item {
-        width: 32%;
-    }
         &_head {
             top: 45%;
         }
@@ -484,22 +482,24 @@ a:hover {
         }
     }
 
-    .footer_header {
+    .discounts_header {
         flex-direction: column;
         gap: 48px; 
         padding-top: 48px;
         padding-bottom: 64px;
       
     }
-    .footer_subscription {
+    .footer {
+        &_subscription {
         flex-direction: column; 
         gap: 48px;
         padding-top: 54px;
         padding-bottom: 140px;
-    }
-    .footer_icons_box {
+        }
+    &_icons_box {
         padding-left:  32px;
         padding-right: 32px;
+        }
     }
 }   
 @media screen and (max-width: 767px) {
@@ -533,23 +533,28 @@ a:hover {
     }
 
     .sale {
-        margin-bottom: 32px;
+        margin-bottom: 16%;
+        &_items {
+            padding-bottom: 0;
+        }
         &_item {
             width: 100vw;
-            margin-bottom: 8%; 
-            min-height: 248px;
-            
+            margin-bottom: 4%; 
+            min-height: 248px;  
+        }
+        &_link {
+            width: 100%;
         }
         &_item.big {
-            width: 100vw;
+            width: 100%;
             min-height: 111px;
         }
         &_img {
-        width: 100vw;
+        width: 98vw;
         }
         &_img.big {
             min-height: 111px;
-            width: 98%;
+            width: 100%;
         }
     }   
     .products_text {
@@ -579,11 +584,11 @@ a:hover {
     .footer_icons {
         min-height: 143px;
         &_box {
-            flex-direction: column; 
+            flex-direction: column-reverse; 
+            
         }
         &_text {
             order: 2;
-            padding: 0 0 9px;
         }
     }
     .icons_nav {
